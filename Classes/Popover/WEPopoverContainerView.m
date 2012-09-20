@@ -51,7 +51,7 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 		[self determineGeometryForSize:correctedSize anchorRect:anchorRect displayArea:displayArea permittedArrowDirections:permittedArrowDirections];
 		[self initFrame];
 		self.backgroundColor = [UIColor clearColor];
-		UIImage *theImage = [UIImage imageNamed:properties.bgImageName];
+		UIImage *theImage = [UIImage imageNamed:properties.bgImageName forClassBundle:self];
 		bgImage = [[theImage stretchableImageWithLeftCapWidth:properties.leftBgCapSize topCapHeight:properties.topBgCapSize] retain];
 		
 		self.clipsToBounds = YES;
@@ -164,10 +164,10 @@ permittedArrowDirections:(UIPopoverArrowDirection)permittedArrowDirections
 	CGFloat biggestSurface = 0.0f;
 	CGFloat currentMinMargin = 0.0f;
 	
-	UIImage *upArrowImage = [UIImage imageNamed:properties.upArrowImageName];
-	UIImage *downArrowImage = [UIImage imageNamed:properties.downArrowImageName];
-	UIImage *leftArrowImage = [UIImage imageNamed:properties.leftArrowImageName];
-	UIImage *rightArrowImage = [UIImage imageNamed:properties.rightArrowImageName];
+	UIImage *upArrowImage = [UIImage imageNamed:properties.upArrowImageName forClassBundle:self];
+	UIImage *downArrowImage = [UIImage imageNamed:properties.downArrowImageName forClassBundle:self];
+	UIImage *leftArrowImage = [UIImage imageNamed:properties.leftArrowImageName forClassBundle:self];
+	UIImage *rightArrowImage = [UIImage imageNamed:properties.rightArrowImageName forClassBundle:self];
 	
 	while (theArrowDirection <= UIPopoverArrowDirectionRight) {
 		
